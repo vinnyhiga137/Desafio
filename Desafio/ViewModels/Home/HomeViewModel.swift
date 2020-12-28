@@ -13,6 +13,7 @@ class HomeViewModel: NSObject {
     var updateTableViewData: (() -> ()) = {}
     
     // Local private attributes
+    private(set) var categories: [CategoryType]
     private(set) var creditLaunches: [Months : [CreditLaunch]] {
         didSet {
             self.updateTableViewData()
@@ -20,6 +21,8 @@ class HomeViewModel: NSObject {
     }
     
     override init() {
+        
+        self.categories = []
         
         self.creditLaunches = [.january: [], .february: [], .march: [], .april: [],
                                .may: [], .june: [], .july: [], .august: [],
@@ -54,6 +57,8 @@ class HomeViewModel: NSObject {
     /// Loads all credit launches in a year and organizes correctly by month.
     /// WARNING! This functions uses an async task inside of it, because we need to access the network to retrieve the data.
     private func loadCreditLaunches() {
+        
+        // Getting the credits launches from a year.
         NetworkHandler.getCreditLaunches(completion: {
             data in
             
@@ -69,5 +74,14 @@ class HomeViewModel: NSObject {
             self.creditLaunches = updatedCreditLaunches
             
         })
+        
+        // Getting the categories for each type of launch.
+        NetworkHandler.getCategoryTypes(completion: {
+            data in
+            
+            self.categories = data
+            
+        })
+        
     }
 }

@@ -19,7 +19,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Setting the home screen title
+        self.navigationController?.navigationBar.topItem?.title = "Lançamentos"
+        
     }
     
     /// Configures the initial state for the table view.
