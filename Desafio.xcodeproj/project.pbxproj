@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		8124B55D259A0C0500463F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B55C259A0C0500463F50 /* AppDelegate.swift */; };
 		8124B55F259A0C0500463F50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B55E259A0C0500463F50 /* SceneDelegate.swift */; };
-		8124B561259A0C0500463F50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B560259A0C0500463F50 /* ViewController.swift */; };
+		8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B560259A0C0500463F50 /* HomeViewController.swift */; };
 		8124B564259A0C0500463F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8124B562259A0C0500463F50 /* Main.storyboard */; };
 		8124B566259A0C0600463F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8124B565259A0C0600463F50 /* Assets.xcassets */; };
 		8124B569259A0C0600463F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8124B567259A0C0600463F50 /* LaunchScreen.storyboard */; };
 		8124B574259A0C0700463F50 /* DesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B573259A0C0700463F50 /* DesafioTests.swift */; };
 		8124B57F259A0C0700463F50 /* DesafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B57E259A0C0700463F50 /* DesafioUITests.swift */; };
+		8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B5A5259A0D3800463F50 /* HomeViewModel.swift */; };
+		815A1A90259A101800B73B94 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A1A8F259A101800B73B94 /* HomeViewController+TableView.swift */; };
+		815A1A97259A10D600B73B94 /* DataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A1A96259A10D600B73B94 /* DataViewCell.swift */; };
+		815A1A9F259A117300B73B94 /* DataViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815A1A9E259A117300B73B94 /* DataViewCell.xib */; };
+		815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FAA259A1BBC00C4D0A9 /* CreditLaunch.swift */; };
+		815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FAF259A1E5C00C4D0A9 /* NetworkHandler.swift */; };
+		815A8FB5259A20AE00C4D0A9 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FB4259A20AE00C4D0A9 /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +45,8 @@
 		8124B559259A0C0500463F50 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8124B55C259A0C0500463F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8124B55E259A0C0500463F50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8124B560259A0C0500463F50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8124B563259A0C0500463F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8124B560259A0C0500463F50 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8124B565259A0C0600463F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8124B568259A0C0600463F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8124B56A259A0C0600463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8124B56F259A0C0700463F50 /* DesafioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8124B573259A0C0700463F50 /* DesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioTests.swift; sourceTree = "<group>"; };
@@ -49,6 +54,17 @@
 		8124B57A259A0C0700463F50 /* DesafioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8124B57E259A0C0700463F50 /* DesafioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioUITests.swift; sourceTree = "<group>"; };
 		8124B580259A0C0700463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8124B5A5259A0D3800463F50 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		815A1A8F259A101800B73B94 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		815A1A96259A10D600B73B94 /* DataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewCell.swift; sourceTree = "<group>"; };
+		815A1A9E259A117300B73B94 /* DataViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewCell.xib; sourceTree = "<group>"; };
+		815A8FAA259A1BBC00C4D0A9 /* CreditLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditLaunch.swift; sourceTree = "<group>"; };
+		815A8FAF259A1E5C00C4D0A9 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		815A8FB4259A20AE00C4D0A9 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		815A8FB9259A2BBE00C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		815A8FBA259A2BBE00C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		815A8FBE259A2BD100C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		815A8FBF259A2BD200C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Main.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +115,11 @@
 		8124B55B259A0C0500463F50 /* Desafio */ = {
 			isa = PBXGroup;
 			children = (
-				8124B55C259A0C0500463F50 /* AppDelegate.swift */,
-				8124B55E259A0C0500463F50 /* SceneDelegate.swift */,
-				8124B560259A0C0500463F50 /* ViewController.swift */,
-				8124B562259A0C0500463F50 /* Main.storyboard */,
+				8124B598259A0C8200463F50 /* iOS */,
+				8124B599259A0C8800463F50 /* Views */,
+				8124B59B259A0C9500463F50 /* ViewModels */,
+				8124B59A259A0C8E00463F50 /* Models */,
 				8124B565259A0C0600463F50 /* Assets.xcassets */,
-				8124B567259A0C0600463F50 /* LaunchScreen.storyboard */,
 				8124B56A259A0C0600463F50 /* Info.plist */,
 			);
 			path = Desafio;
@@ -115,6 +130,7 @@
 			children = (
 				8124B573259A0C0700463F50 /* DesafioTests.swift */,
 				8124B575259A0C0700463F50 /* Info.plist */,
+				815A8FB4259A20AE00C4D0A9 /* NetworkTests.swift */,
 			);
 			path = DesafioTests;
 			sourceTree = "<group>";
@@ -126,6 +142,77 @@
 				8124B580259A0C0700463F50 /* Info.plist */,
 			);
 			path = DesafioUITests;
+			sourceTree = "<group>";
+		};
+		8124B598259A0C8200463F50 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8124B567259A0C0600463F50 /* LaunchScreen.storyboard */,
+				8124B562259A0C0500463F50 /* Main.storyboard */,
+				8124B55C259A0C0500463F50 /* AppDelegate.swift */,
+				8124B55E259A0C0500463F50 /* SceneDelegate.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		8124B599259A0C8800463F50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				815A1A95259A10BB00B73B94 /* ViewControllers */,
+				815A1A94259A10B700B73B94 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8124B59A259A0C8E00463F50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8124B5AE259A0D5D00463F50 /* Data */,
+				8124B5AD259A0D5700463F50 /* Network */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8124B59B259A0C9500463F50 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8124B5A5259A0D3800463F50 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8124B5AD259A0D5700463F50 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				815A8FAF259A1E5C00C4D0A9 /* NetworkHandler.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8124B5AE259A0D5D00463F50 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				815A8FAA259A1BBC00C4D0A9 /* CreditLaunch.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		815A1A94259A10B700B73B94 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				815A1A96259A10D600B73B94 /* DataViewCell.swift */,
+				815A1A9E259A117300B73B94 /* DataViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		815A1A95259A10BB00B73B94 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8124B560259A0C0500463F50 /* HomeViewController.swift */,
+				815A1A8F259A101800B73B94 /* HomeViewController+TableView.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +299,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"pt-BR",
 			);
 			mainGroup = 8124B550259A0C0500463F50;
 			productRefGroup = 8124B55A259A0C0500463F50 /* Products */;
@@ -233,6 +320,7 @@
 			files = (
 				8124B569259A0C0600463F50 /* LaunchScreen.storyboard in Resources */,
 				8124B566259A0C0600463F50 /* Assets.xcassets in Resources */,
+				815A1A9F259A117300B73B94 /* DataViewCell.xib in Resources */,
 				8124B564259A0C0500463F50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8124B561259A0C0500463F50 /* ViewController.swift in Sources */,
+				815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */,
+				8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */,
 				8124B55D259A0C0500463F50 /* AppDelegate.swift in Sources */,
+				815A1A97259A10D600B73B94 /* DataViewCell.swift in Sources */,
 				8124B55F259A0C0500463F50 /* SceneDelegate.swift in Sources */,
+				815A1A90259A101800B73B94 /* HomeViewController+TableView.swift in Sources */,
+				8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */,
+				815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815A8FB5259A20AE00C4D0A9 /* NetworkTests.swift in Sources */,
 				8124B574259A0C0700463F50 /* DesafioTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +393,8 @@
 		8124B562259A0C0500463F50 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8124B563259A0C0500463F50 /* Base */,
+				815A8FBA259A2BBE00C4D0A9 /* pt-BR */,
+				815A8FBF259A2BD200C4D0A9 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -307,7 +402,8 @@
 		8124B567259A0C0600463F50 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8124B568259A0C0600463F50 /* Base */,
+				815A8FB9259A2BBE00C4D0A9 /* pt-BR */,
+				815A8FBE259A2BD100C4D0A9 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -319,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -366,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -421,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43793QF9P9;
 				INFOPLIST_FILE = Desafio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = viniciushiga.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43793QF9P9;
 				INFOPLIST_FILE = Desafio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +565,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = viniciushiga.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

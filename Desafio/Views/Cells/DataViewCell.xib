@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DataViewCell" customModule="Desafio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name not defined" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RW9-rG-b53" userLabel="Name Label">
+                    <rect key="frame" x="20" y="24.5" width="192" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="192" id="m73-x7-AnR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month not defined" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aQ-0t-H2i" userLabel="Month Label">
+                    <rect key="frame" x="20" y="48.5" width="186" height="14.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="186" id="F5N-0K-rwW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-ZJ-2qc" userLabel="Value Label">
+                    <rect key="frame" x="254" y="30" width="140" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RW9-rG-b53" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="GA4-Ri-UY6"/>
+                <constraint firstItem="2aQ-0t-H2i" firstAttribute="top" secondItem="RW9-rG-b53" secondAttribute="bottom" constant="3" id="WHq-t8-Qc7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2aQ-0t-H2i" secondAttribute="bottom" constant="17" id="WM1-Lu-BpQ"/>
+                <constraint firstItem="PdS-ZJ-2qc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="eOU-sk-jbf"/>
+                <constraint firstItem="2aQ-0t-H2i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hm3-xQ-ynq"/>
+                <constraint firstItem="RW9-rG-b53" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="pMQ-IQ-As6"/>
+                <constraint firstItem="PdS-ZJ-2qc" firstAttribute="leading" secondItem="RW9-rG-b53" secondAttribute="trailing" constant="42" id="pul-Ng-fh0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PdS-ZJ-2qc" secondAttribute="bottom" constant="29" id="wgm-8l-n3U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PdS-ZJ-2qc" secondAttribute="trailing" constant="20" id="xMw-Bi-uxb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="month" destination="2aQ-0t-H2i" id="QTH-nM-eRp"/>
+                <outlet property="name" destination="RW9-rG-b53" id="2PN-jj-zI2"/>
+                <outlet property="value" destination="PdS-ZJ-2qc" id="jT3-gi-B9s"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
