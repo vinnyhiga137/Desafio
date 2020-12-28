@@ -22,6 +22,8 @@
 		815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FAA259A1BBC00C4D0A9 /* CreditLaunch.swift */; };
 		815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FAF259A1E5C00C4D0A9 /* NetworkHandler.swift */; };
 		815A8FB5259A20AE00C4D0A9 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FB4259A20AE00C4D0A9 /* NetworkTests.swift */; };
+		815A8FC5259A546700C4D0A9 /* Months.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FC4259A546700C4D0A9 /* Months.swift */; };
+		8170EC3E259A5E5600102BFF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170EC3D259A5E5600102BFF /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		815A8FBA259A2BBE00C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		815A8FBE259A2BD100C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		815A8FBF259A2BD200C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		815A8FC4259A546700C4D0A9 /* Months.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Months.swift; sourceTree = "<group>"; };
+		8170EC3D259A5E5600102BFF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8124B598259A0C8200463F50 /* iOS */,
+				815A8FC3259A544D00C4D0A9 /* Utils */,
 				8124B599259A0C8800463F50 /* Views */,
 				8124B59B259A0C9500463F50 /* ViewModels */,
 				8124B59A259A0C8E00463F50 /* Models */,
@@ -176,7 +181,7 @@
 		8124B59B259A0C9500463F50 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8124B5A5259A0D3800463F50 /* HomeViewModel.swift */,
+				8170EC3C259A5E4700102BFF /* Home */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,10 +214,43 @@
 		815A1A95259A10BB00B73B94 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8170EC3B259A5E3D00102BFF /* Details */,
+				8170EC3A259A5E3500102BFF /* Home */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		815A8FC3259A544D00C4D0A9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				815A8FC4259A546700C4D0A9 /* Months.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8170EC3A259A5E3500102BFF /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				8124B560259A0C0500463F50 /* HomeViewController.swift */,
 				815A1A8F259A101800B73B94 /* HomeViewController+TableView.swift */,
 			);
-			path = ViewControllers;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8170EC3B259A5E3D00102BFF /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8170EC3D259A5E5600102BFF /* DetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		8170EC3C259A5E4700102BFF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8124B5A5259A0D3800463F50 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815A8FC5259A546700C4D0A9 /* Months.swift in Sources */,
 				815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */,
 				8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */,
 				8124B55D259A0C0500463F50 /* AppDelegate.swift in Sources */,
@@ -354,6 +393,7 @@
 				815A1A90259A101800B73B94 /* HomeViewController+TableView.swift in Sources */,
 				8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */,
 				815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */,
+				8170EC3E259A5E5600102BFF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

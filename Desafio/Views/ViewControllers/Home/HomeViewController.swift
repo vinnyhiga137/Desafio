@@ -41,7 +41,6 @@ class HomeViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "DataViewCell", bundle: nil), forCellReuseIdentifier: "DataViewCell")
-        self.tableView.separatorStyle = .none
         self.tableView.rowHeight = 80.0
         
         
