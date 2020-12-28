@@ -16,6 +16,8 @@
 		8124B57F259A0C0700463F50 /* DesafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B57E259A0C0700463F50 /* DesafioUITests.swift */; };
 		8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B5A5259A0D3800463F50 /* HomeViewModel.swift */; };
 		812DB76B259A654300C53E98 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB76A259A654300C53E98 /* CategoryType.swift */; };
+		812DB771259A6DD400C53E98 /* ReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB770259A6DD400C53E98 /* ReceiptView.swift */; };
+		812DB779259A6E3200C53E98 /* ReceiptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812DB778259A6E3200C53E98 /* ReceiptView.xib */; };
 		815A1A90259A101800B73B94 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A1A8F259A101800B73B94 /* HomeViewController+TableView.swift */; };
 		815A1A97259A10D600B73B94 /* DataViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A1A96259A10D600B73B94 /* DataViewCell.swift */; };
 		815A1A9F259A117300B73B94 /* DataViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815A1A9E259A117300B73B94 /* DataViewCell.xib */; };
@@ -58,6 +60,8 @@
 		8124B580259A0C0700463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8124B5A5259A0D3800463F50 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		812DB76A259A654300C53E98 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		812DB770259A6DD400C53E98 /* ReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptView.swift; sourceTree = "<group>"; };
+		812DB778259A6E3200C53E98 /* ReceiptView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptView.xib; sourceTree = "<group>"; };
 		815A1A8F259A101800B73B94 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		815A1A96259A10D600B73B94 /* DataViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewCell.swift; sourceTree = "<group>"; };
 		815A1A9E259A117300B73B94 /* DataViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewCell.xib; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		8124B599259A0C8800463F50 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				812DB76F259A6DB800C53E98 /* CustomsViews */,
 				815A1A95259A10BB00B73B94 /* ViewControllers */,
 				815A1A94259A10B700B73B94 /* Cells */,
 			);
@@ -199,6 +204,15 @@
 				812DB76A259A654300C53E98 /* CategoryType.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		812DB76F259A6DB800C53E98 /* CustomsViews */ = {
+			isa = PBXGroup;
+			children = (
+				812DB770259A6DD400C53E98 /* ReceiptView.swift */,
+				812DB778259A6E3200C53E98 /* ReceiptView.xib */,
+			);
+			path = CustomsViews;
 			sourceTree = "<group>";
 		};
 		815A1A94259A10B700B73B94 /* Cells */ = {
@@ -358,6 +372,7 @@
 				8124B569259A0C0600463F50 /* LaunchScreen.storyboard in Resources */,
 				8124B566259A0C0600463F50 /* Assets.xcassets in Resources */,
 				815A1A9F259A117300B73B94 /* DataViewCell.xib in Resources */,
+				812DB779259A6E3200C53E98 /* ReceiptView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +400,7 @@
 				815A8FC5259A546700C4D0A9 /* Months.swift in Sources */,
 				815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */,
 				8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */,
+				812DB771259A6DD400C53E98 /* ReceiptView.swift in Sources */,
 				8124B55D259A0C0500463F50 /* AppDelegate.swift in Sources */,
 				815A1A97259A10D600B73B94 /* DataViewCell.swift in Sources */,
 				8124B55F259A0C0500463F50 /* SceneDelegate.swift in Sources */,

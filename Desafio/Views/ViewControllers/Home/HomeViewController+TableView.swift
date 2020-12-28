@@ -43,7 +43,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // Finding the respectively credit launch
+        let month = Calendar.current.monthSymbols[indexPath.section].lowercased()
         let detailsVC = DetailsViewController()
+        
+        detailsVC.creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: month)!]![indexPath.item]
+        
+        // Finding the correct category
+        for category in self.homeViewModel.categories where category.id == detailsVC.creditLaunch?.categoria {
+            
+            detailsVC.category = category
+            break
+            
+        }
+        
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     

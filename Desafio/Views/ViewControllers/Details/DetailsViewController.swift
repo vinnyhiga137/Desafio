@@ -9,6 +9,9 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    var creditLaunch: CreditLaunch?
+    var category: CategoryType?
+    
     override func loadView() {
         super.loadView()
 
@@ -28,17 +31,37 @@ class DetailsViewController: UIViewController {
     
     private func addReceiptView() {
         
-        let receiptView = UIView()
-        
+        // Creating the background of the receipt
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "ReceiptView", bundle: bundle)
+        let receiptView = nib.instantiate(withOwner: self, options: nil).first as! ReceiptView
+
         self.view.addSubview(receiptView)
         
         receiptView.translatesAutoresizingMaskIntoConstraints = false
-        receiptView.backgroundColor = .systemBlue
         
-        receiptView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        receiptView.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
         receiptView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         receiptView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        receiptView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+
+        
+        if let creditLaunch = self.creditLaunch {
+
+            // Getting the value converted into local currency (in this case Reais)
+            let formatter = NumberFormatter()
+            formatter.usesGroupingSeparator = true
+            formatter.numberStyle = .currency
+            formatter.locale = Locale.current
+            
+            let value = formatter.string(from: NSNumber(value: creditLaunch.valor))
+            
+            // Setting up the labels
+            receiptView.name?.text = creditLaunch.origem
+            receiptView.month?.text = Months.allCases[creditLaunch.mes_lancamento - 1].rawValue
+            receiptView.value?.text = value
+            receiptView.category?.text = self.category?.nome
+            
+        }
         
     }
     
