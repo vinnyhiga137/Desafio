@@ -20,13 +20,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
     
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        let value = self.homeViewModel.balance(in: Months(rawValue: section)!).convertToReal()
+        let value = self.creditsVM.balance(in: Months(rawValue: section)!).convertToReal()
         return "Montante desse mês: \(value)"
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.homeViewModel.creditLaunches[Months(rawValue: section)!]!.count
+        return self.creditsVM.creditLaunches[Months(rawValue: section)!]!.count
     }
     
     
@@ -35,10 +35,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
         // Finding the respectively credit launch
         let detailsVC = DetailsViewController()
         
-        detailsVC.creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: indexPath.section)!]![indexPath.item]
+        detailsVC.creditLaunch = self.creditsVM.creditLaunches[Months(rawValue: indexPath.section)!]![indexPath.item]
         
         // Finding the correct category
-        for category in self.homeViewModel.categories where category.id == detailsVC.creditLaunch?.categoria {
+        for category in self.creditsVM.categories where category.id == detailsVC.creditLaunch?.categoria {
             
             detailsVC.category = category
             break
@@ -56,7 +56,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
         // Setting up the values for each cell about the credit launches
         let month = Months(rawValue: indexPath.section)!.description.lowercased()
         
-        if let creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: indexPath.section)!]?[indexPath.item] {
+        if let creditLaunch = self.creditsVM.creditLaunches[Months(rawValue: indexPath.section)!]?[indexPath.item] {
     
             // Populating the cell
             cell.name?.text = creditLaunch.origem

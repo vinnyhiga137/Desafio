@@ -12,6 +12,8 @@ class MonthlyViewController: UIViewController {
     // Local attributes
     let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
     var calendarHeaderView: CalendarHeaderView?
+    var creditsVM = CreditLaunchesViewModel()
+    var selectedMonthIndex: Int = 0
     
     // Loading the views manually
     override func loadView() {
@@ -24,13 +26,13 @@ class MonthlyViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
         // Setting the home screen title
         self.navigationController?.navigationBar.topItem?.title = "Mensal"
-        
     }
     
     
+    /// Adds the calendar header above the list of credit launches.
+    /// The anchors (constraints), triggers and month's name are set here.
     private func addCalendarHeader() {
         
         // Creating the background of the receipt
@@ -40,11 +42,20 @@ class MonthlyViewController: UIViewController {
 
         self.view.addSubview(calendarHeaderView!)
         
-        calendarHeaderView!.translatesAutoresizingMaskIntoConstraints = false
+        // Setting up constraints
+        self.calendarHeaderView!.translatesAutoresizingMaskIntoConstraints = false
         
-        calendarHeaderView!.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 8).isActive = true
-        calendarHeaderView!.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        calendarHeaderView!.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        self.calendarHeaderView!.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor, constant: 8).isActive = true
+        self.calendarHeaderView!.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.calendarHeaderView!.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        
+        
+        // Updating the month label
+        self.calendarHeaderView?.name?.text = Months(rawValue: self.selectedMonthIndex)?.description.uppercased()
+        
+        self.calendarHeaderView?.backButton?.addTarget(self, action: #selector(self.changeToPreviousMonth), for: .touchDown)
+        
+        self.calendarHeaderView?.nextButton?.addTarget(self, action: #selector(self.changeToNextMonth), for: .touchDown)
         
     }
     
@@ -77,11 +88,47 @@ class MonthlyViewController: UIViewController {
         
         
         // Binding viewmodel and loading data
-//        self.homeViewModel.updateTableViewData = {
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
+        self.creditsVM.updateTableViewData = {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
+    
+    @objc
+    private func changeToPreviousMonth() {
+        
+        if self.selectedMonthIndex == 0 {
+            self.selectedMonthIndex = 11
+        }
+        else {
+            self.selectedMonthIndex -= 1
+        }
+        
+        self.calendarHeaderView?.name?.text = Months(rawValue: self.selectedMonthIndex)?.description.uppercased()
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    @objc
+    private func changeToNextMonth() {
+        
+        if self.selectedMonthIndex == 11 {
+            self.selectedMonthIndex = 0
+        }
+        else {
+            self.selectedMonthIndex += 1
+        }
+        
+        self.calendarHeaderView?.name?.text = Months(rawValue: self.selectedMonthIndex)?.description.uppercased()
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         
     }
     

@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     // Local attributes
     let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
-    let homeViewModel = CreditLaunchesViewModel()
+    let creditsVM = CreditLaunchesViewModel()
     
     // Loading the views manually
     override func loadView() {
@@ -51,7 +51,7 @@ class HomeViewController: UIViewController {
         
         
         // Binding viewmodel and loading data
-        self.homeViewModel.updateTableViewData = {
+        self.creditsVM.updateTableViewData = {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

@@ -10,7 +10,7 @@ import UIKit
 class CalendarHeaderView: UIView {
     
     @IBOutlet weak var backButton: UIButton?
-    @IBOutlet weak var goButton: UIButton?
+    @IBOutlet weak var nextButton: UIButton?
     @IBOutlet weak var name: UILabel?
     
 }

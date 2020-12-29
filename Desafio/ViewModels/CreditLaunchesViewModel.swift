@@ -51,6 +51,14 @@ class CreditLaunchesViewModel: NSObject {
         return value
     }
     
+    
+    
+    /// Gets certain credits launches from a desired month.
+    /// - Parameter month: Desired month.
+    /// - Returns: A list that contains all credit launches from a month.
+    func getCertainCreditLaunches(in month: Months) -> [CreditLaunch] {
+        return self.creditLaunches[month]!
+    }
 
     
     /// Loads all credit launches in a year and organizes correctly by month.
