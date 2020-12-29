@@ -9,9 +9,11 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    // Local attributes
     var creditLaunch: CreditLaunch?
     var category: CategoryType?
     
+    /// Loading the views manually.
     override func loadView() {
         super.loadView()
 
@@ -21,14 +23,8 @@ class DetailsViewController: UIViewController {
         
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-    }
-    
-    
+    /// Adds the receipt view into the top of the screen.
+    /// The receipt will show the full details about certain credit launch!
     private func addReceiptView() {
         
         // Creating the background of the receipt
@@ -47,18 +43,10 @@ class DetailsViewController: UIViewController {
         
         if let creditLaunch = self.creditLaunch {
 
-            // Getting the value converted into local currency (in this case Reais)
-            let formatter = NumberFormatter()
-            formatter.usesGroupingSeparator = true
-            formatter.numberStyle = .currency
-            formatter.locale = Locale.current
-            
-            let value = formatter.string(from: NSNumber(value: creditLaunch.valor))
-            
             // Setting up the labels
             receiptView.name?.text = creditLaunch.origem
-            receiptView.month?.text = Months.allCases[creditLaunch.mes_lancamento - 1].rawValue
-            receiptView.value?.text = value
+            receiptView.month?.text = Months.allCases[creditLaunch.mes_lancamento - 1].description
+            receiptView.value?.text = creditLaunch.valor.convertToReal()
             receiptView.category?.text = self.category?.nome
             
         }

@@ -12,8 +12,6 @@
 		8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B560259A0C0500463F50 /* HomeViewController.swift */; };
 		8124B566259A0C0600463F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8124B565259A0C0600463F50 /* Assets.xcassets */; };
 		8124B569259A0C0600463F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8124B567259A0C0600463F50 /* LaunchScreen.storyboard */; };
-		8124B574259A0C0700463F50 /* DesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B573259A0C0700463F50 /* DesafioTests.swift */; };
-		8124B57F259A0C0700463F50 /* DesafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B57E259A0C0700463F50 /* DesafioUITests.swift */; };
 		8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B5A5259A0D3800463F50 /* HomeViewModel.swift */; };
 		812DB76B259A654300C53E98 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB76A259A654300C53E98 /* CategoryType.swift */; };
 		812DB771259A6DD400C53E98 /* ReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB770259A6DD400C53E98 /* ReceiptView.swift */; };
@@ -25,6 +23,10 @@
 		815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FAF259A1E5C00C4D0A9 /* NetworkHandler.swift */; };
 		815A8FB5259A20AE00C4D0A9 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FB4259A20AE00C4D0A9 /* NetworkTests.swift */; };
 		815A8FC5259A546700C4D0A9 /* Months.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A8FC4259A546700C4D0A9 /* Months.swift */; };
+		81677DE2259B60DB00579693 /* Float+Reais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81677DE1259B60DB00579693 /* Float+Reais.swift */; };
+		81677DED259B6F4600579693 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81677DEC259B6F4600579693 /* HomeViewModelTests.swift */; };
+		81677DF2259B726300579693 /* DesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81677DF1259B726300579693 /* DesafioTests.swift */; };
+		81677E00259B72AC00579693 /* DesafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81677DFF259B72AC00579693 /* DesafioUITests.swift */; };
 		8170EC3E259A5E5600102BFF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8170EC3D259A5E5600102BFF /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,10 +55,8 @@
 		8124B565259A0C0600463F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8124B56A259A0C0600463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8124B56F259A0C0700463F50 /* DesafioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8124B573259A0C0700463F50 /* DesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioTests.swift; sourceTree = "<group>"; };
 		8124B575259A0C0700463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8124B57A259A0C0700463F50 /* DesafioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8124B57E259A0C0700463F50 /* DesafioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioUITests.swift; sourceTree = "<group>"; };
 		8124B580259A0C0700463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8124B5A5259A0D3800463F50 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		812DB76A259A654300C53E98 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
@@ -71,6 +71,10 @@
 		815A8FB9259A2BBE00C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		815A8FBE259A2BD100C4D0A9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		815A8FC4259A546700C4D0A9 /* Months.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Months.swift; sourceTree = "<group>"; };
+		81677DE1259B60DB00579693 /* Float+Reais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Reais.swift"; sourceTree = "<group>"; };
+		81677DEC259B6F4600579693 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		81677DF1259B726300579693 /* DesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioTests.swift; sourceTree = "<group>"; };
+		81677DFF259B72AC00579693 /* DesafioUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesafioUITests.swift; sourceTree = "<group>"; };
 		8170EC3D259A5E5600102BFF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,9 +140,10 @@
 		8124B572259A0C0700463F50 /* DesafioTests */ = {
 			isa = PBXGroup;
 			children = (
-				8124B573259A0C0700463F50 /* DesafioTests.swift */,
 				8124B575259A0C0700463F50 /* Info.plist */,
 				815A8FB4259A20AE00C4D0A9 /* NetworkTests.swift */,
+				81677DEC259B6F4600579693 /* HomeViewModelTests.swift */,
+				81677DF1259B726300579693 /* DesafioTests.swift */,
 			);
 			path = DesafioTests;
 			sourceTree = "<group>";
@@ -146,7 +151,7 @@
 		8124B57D259A0C0700463F50 /* DesafioUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8124B57E259A0C0700463F50 /* DesafioUITests.swift */,
+				81677DFF259B72AC00579693 /* DesafioUITests.swift */,
 				8124B580259A0C0700463F50 /* Info.plist */,
 			);
 			path = DesafioUITests;
@@ -237,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				815A8FC4259A546700C4D0A9 /* Months.swift */,
+				81677DE1259B60DB00579693 /* Float+Reais.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 					};
 					8124B579259A0C0700463F50 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = 8124B558259A0C0500463F50;
 					};
 				};
@@ -408,6 +415,7 @@
 				812DB76B259A654300C53E98 /* CategoryType.swift in Sources */,
 				8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */,
 				815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */,
+				81677DE2259B60DB00579693 /* Float+Reais.swift in Sources */,
 				8170EC3E259A5E5600102BFF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,8 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81677DF2259B726300579693 /* DesafioTests.swift in Sources */,
 				815A8FB5259A20AE00C4D0A9 /* NetworkTests.swift in Sources */,
-				8124B574259A0C0700463F50 /* DesafioTests.swift in Sources */,
+				81677DED259B6F4600579693 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8124B57F259A0C0700463F50 /* DesafioUITests.swift in Sources */,
+				81677E00259B72AC00579693 /* DesafioUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +672,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43793QF9P9;
 				INFOPLIST_FILE = DesafioUITests/Info.plist;
@@ -673,6 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = viniciushiga.DesafioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Desafio;
@@ -683,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43793QF9P9;
 				INFOPLIST_FILE = DesafioUITests/Info.plist;

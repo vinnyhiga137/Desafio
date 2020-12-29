@@ -53,10 +53,11 @@ class HomeViewModel: NSObject {
         return value
     }
     
+
     
     /// Loads all credit launches in a year and organizes correctly by month.
     /// WARNING! This functions uses an async task inside of it, because we need to access the network to retrieve the data.
-    private func loadCreditLaunches() {
+    func loadCreditLaunches() {
         
         // Getting the credits launches from a year.
         NetworkHandler.getCreditLaunches(completion: {
@@ -64,10 +65,9 @@ class HomeViewModel: NSObject {
             
             var updatedCreditLaunches: [Months : [CreditLaunch]] = [.january: [], .february: [], .march: [], .april: [], .may: [], .june: [], .july: [], .august: [], .september: [], .october: [], .november: [], .december: []]
             
-            for content in data {
+            for index in 0 ..< data.count {
                 
-                let month = Calendar.current.monthSymbols[content.mes_lancamento - 1].lowercased()
-                updatedCreditLaunches[Months(rawValue: month)!]!.append(content)
+                updatedCreditLaunches[Months(rawValue: data[index].mes_lancamento - 1)!]!.append(data[index])
                 
             }
 

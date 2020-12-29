@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CreditLaunch: Codable {
+class CreditLaunch: NSObject, Codable {
     
     // Local attributes
     var id: Int
@@ -15,6 +15,23 @@ class CreditLaunch: Codable {
     var origem: String
     var categoria: Int
     var mes_lancamento: Int
+    
+    
+    /// Initializes a credit launch object.
+    /// - Parameters:
+    ///   - id: Unique identifier of the credit launch.
+    ///   - valor: Value of the launch.
+    ///   - origem: Origin's name.
+    ///   - categoria: Category of the launch (e.g., 1 for transport, 2 for online shopping...).
+    ///   - mes_lancamento: Month of launch.
+    init(id: Int, valor: Float, origem: String, categoria: Int, mes_lancamento: Int) {
+        self.id = id
+        self.valor = valor
+        self.origem = origem
+        self.categoria = categoria
+        self.mes_lancamento = mes_lancamento
+    }
+    
     
     required init(from decoder: Decoder) throws {
         
@@ -27,6 +44,7 @@ class CreditLaunch: Codable {
         self.mes_lancamento = try container.decode(Int.self, forKey: .mes_lancamento)
         
     }
+    
     
     func encode(to encoder: Encoder) throws {
         

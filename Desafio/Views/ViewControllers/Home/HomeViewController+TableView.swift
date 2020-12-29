@@ -10,44 +10,32 @@ import UIKit
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 12
+        return Months.allCases.count
     }
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Calendar.current.monthSymbols[section].uppercased()
-        
+        return Months(rawValue: section)!.description.uppercased()
     }
     
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        
-        let month = Calendar.current.monthSymbols[section].lowercased()
-        
-        let formatter = NumberFormatter()
-        formatter.usesGroupingSeparator = true
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.current
-        
-        let value = formatter.string(from: NSNumber(value: self.homeViewModel.balance(in: Months(rawValue: month)!)))
-        
-        return "Montante desse mês: \(value!)"
+        let value = self.homeViewModel.balance(in: Months(rawValue: section)!).convertToReal()
+        return "Montante desse mês: \(value)"
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let month = Calendar.current.monthSymbols[section].lowercased()
-        return self.homeViewModel.creditLaunches[Months(rawValue: month)!]!.count
+        return self.homeViewModel.creditLaunches[Months(rawValue: section)!]!.count
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Finding the respectively credit launch
-        let month = Calendar.current.monthSymbols[indexPath.section].lowercased()
         let detailsVC = DetailsViewController()
         
-        detailsVC.creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: month)!]![indexPath.item]
+        detailsVC.creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: indexPath.section)!]![indexPath.item]
         
         // Finding the correct category
         for category in self.homeViewModel.categories where category.id == detailsVC.creditLaunch?.categoria {
@@ -66,25 +54,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "DataViewCell", for: indexPath) as! DataViewCell
         
         // Setting up the values for each cell about the credit launches
-        let month = Calendar.current.monthSymbols[indexPath.section].lowercased()
+        let month = Months(rawValue: indexPath.section)!.description.lowercased()
         
-        // Checking if the current index path index exists
-        if indexPath.item < self.homeViewModel.creditLaunches[Months(rawValue: month)!]!.count {
+        if let creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: indexPath.section)!]?[indexPath.item] {
+    
+            // Populating the cell
+            cell.name?.text = creditLaunch.origem
+            cell.month?.text = month.uppercased()
+            cell.value?.text = creditLaunch.valor.convertToReal()
             
-            if let creditLaunch = self.homeViewModel.creditLaunches[Months(rawValue: month)!]?[indexPath.item] {
-        
-                // Populating the cell
-                let formatter = NumberFormatter()
-                formatter.usesGroupingSeparator = true
-                formatter.numberStyle = .currency
-                formatter.locale = Locale.current
-
-                cell.name?.text = creditLaunch.origem
-                cell.month?.text = month.uppercased()
-                cell.value?.text = formatter.string(from: NSNumber(value: creditLaunch.valor))
-                
-            }
         }
+    
         
         return cell
     }

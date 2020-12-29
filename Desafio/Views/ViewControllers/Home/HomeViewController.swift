@@ -9,14 +9,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // Local attributes
     let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
     let homeViewModel = HomeViewModel()
     
+    // Loading the views manually
     override func loadView() {
         super.loadView()
         self.addTableView()
     }
     
+    // Setting up some minor changes into the navigation bar and other views
     override func viewDidLoad() {
         super.viewDidLoad()
         

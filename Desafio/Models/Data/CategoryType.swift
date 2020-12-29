@@ -7,10 +7,22 @@
 
 import Foundation
 
-class CategoryType: Codable {
+class CategoryType: NSObject, Codable {
  
+    // Local attributes
     var id: Int
     var nome: String
+    
+    
+    /// Initializes a category type object.
+    /// - Parameters:
+    ///   - id: Unique identifier of the category.
+    ///   - nome: Name of the category.
+    init(id: Int, nome: String) {
+        self.id = id
+        self.nome = nome
+    }
+    
     
     required init(from decoder: Decoder) throws {
         
@@ -20,6 +32,7 @@ class CategoryType: Codable {
         self.nome = try container.decode(String.self, forKey: .nome)
         
     }
+    
     
     func encode(to encoder: Encoder) throws {
         

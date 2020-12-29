@@ -7,17 +7,46 @@
 
 import Foundation
 
-enum Months: String, CaseIterable {
-    case january = "janeiro"
-    case february = "fevereiro"
-    case march = "março"
-    case april = "abril"
-    case may = "maio"
-    case june = "junho"
-    case july = "julho"
-    case august = "agosto"
-    case september = "setembro"
-    case october = "outubro"
-    case november = "novembro"
-    case december = "dezembro"
+enum Months: Int, CaseIterable {
+    case january = 0
+    case february = 1
+    case march = 2
+    case april = 3
+    case may = 4
+    case june = 5
+    case july = 6
+    case august = 7
+    case september = 8
+    case october = 9
+    case november = 10
+    case december = 11
+    
+    var description: String {
+        switch self {
+        case .january:
+            return "janeiro"
+        case .february:
+            return "fevereiro"
+        case .march:
+            return "março"
+        case .april:
+            return "abril"
+        case .may:
+            return "maio"
+        case .june:
+            return "junho"
+        case .july:
+            return "julho"
+        case .august:
+            return "agosto"
+        case .september:
+            return "setembro"
+        case .october:
+            return "outubro"
+        case .november:
+            return "novembro"
+        case .december:
+            return "dezembro"
+        }
+    }
 }

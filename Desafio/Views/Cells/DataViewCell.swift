@@ -9,6 +9,7 @@ import UIKit
 
 class DataViewCell: UITableViewCell {
     
+    // Local attributes
     @IBOutlet weak var name: UILabel?
     @IBOutlet weak var month: UILabel?
     @IBOutlet weak var value: UILabel?
@@ -19,10 +20,11 @@ class DataViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         self.setup()
     }
     
+    /// Setups the respectively Xib file to this class.
+    /// The xib will show the most important data related to the credit launches.
     private func setup() {
         
         let bundle = Bundle(for: type(of: self))
