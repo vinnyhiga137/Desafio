@@ -16,11 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let navigation = UINavigationController()
-        let mainVC = HomeViewController(nibName: nil, bundle: nil)
+        let tab = UITabBarController()
+        let homeNavigation = UINavigationController()
+        let monthlyNavigation = UINavigationController()
+        
+        let homeVC = HomeViewController(nibName: nil, bundle: nil)
+        let monthlyVC = MonthlyViewController(nibName: nil, bundle: nil)
     
-        navigation.viewControllers = [mainVC]
-        self.window!.rootViewController = navigation
+        homeNavigation.viewControllers = [homeVC]
+        monthlyNavigation.viewControllers = [monthlyVC]
+        tab.viewControllers = [homeNavigation, monthlyNavigation]
+        
+        homeNavigation.title = "Geral"
+        monthlyNavigation.title = "Mensal"
+        
+        self.window!.rootViewController = tab
         self.window?.makeKeyAndVisible()
         
         return true

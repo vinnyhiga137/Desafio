@@ -21,11 +21,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let navigation = UINavigationController()
-        let mainVC = HomeViewController(nibName: nil, bundle: nil)
+        let tab = UITabBarController()
+        let homeNavigation = UINavigationController()
+        let monthlyNavigation = UINavigationController()
         
-        navigation.viewControllers = [mainVC]
-        window.rootViewController = navigation
+        let homeVC = HomeViewController(nibName: nil, bundle: nil)
+        let monthlyVC = MonthlyViewController(nibName: nil, bundle: nil)
+        
+        homeNavigation.viewControllers = [homeVC]
+        monthlyNavigation.viewControllers = [monthlyVC]
+        tab.viewControllers = [homeNavigation, monthlyNavigation]
+        
+        window.rootViewController = tab
+        
+        homeNavigation.title = "Geral"
+        monthlyNavigation.title = "Mensal"
         
         self.window = window
         window.makeKeyAndVisible()

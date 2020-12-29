@@ -1,17 +1,16 @@
 //
-//  HomeViewController.swift
+//  MonthlyViewController.swift
 //  Desafio
 //
-//  Created by Vinicius Hiroshi Higa on 28/12/20.
+//  Created by Vinicius Hiroshi Higa on 29/12/20.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class MonthlyViewController: UIViewController {
+    
     // Local attributes
     let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
-    let homeViewModel = HomeViewModel()
     
     // Loading the views manually
     override func loadView() {
@@ -19,14 +18,6 @@ class HomeViewController: UIViewController {
         self.addTableView()
     }
     
-    // Setting up some minor changes into the navigation bar and other views
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Setting the home screen title
-        self.navigationController?.navigationBar.topItem?.title = "Geral"
-        
-    }
     
     /// Configures the initial state for the table view.
     /// The anchors (constraints), delegate, datasource, size are set here.
@@ -51,14 +42,12 @@ class HomeViewController: UIViewController {
         
         
         // Binding viewmodel and loading data
-        self.homeViewModel.updateTableViewData = {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+//        self.homeViewModel.updateTableViewData = {
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
         
     }
-
-
+    
 }
-

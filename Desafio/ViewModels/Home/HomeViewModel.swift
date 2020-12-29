@@ -44,9 +44,7 @@ class HomeViewModel: NSObject {
         
         if let launches = self.creditLaunches[month] {
             
-            for content in launches {
-                value += content.valor
-            }
+            launches.forEach { value += $0.valor }
             
         }
         

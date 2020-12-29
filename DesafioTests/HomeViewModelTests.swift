@@ -24,7 +24,7 @@ class HomeViewModelTests: XCTestCase {
 
     func testBalance() throws {
 
-        var value = self.homeViewModel?.balance(in: .january)
+        let value = self.homeViewModel?.balance(in: .january)
         XCTAssertTrue(value == 0.0, "Sucesso!")
         
     }

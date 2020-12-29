@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8114304F259BA4B00066D161 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8114304E259BA4B00066D161 /* MonthlyViewController.swift */; };
+		81143057259BA5060066D161 /* MonthlyViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81143056259BA5060066D161 /* MonthlyViewController+TableView.swift */; };
 		8124B55D259A0C0500463F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B55C259A0C0500463F50 /* AppDelegate.swift */; };
 		8124B55F259A0C0500463F50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B55E259A0C0500463F50 /* SceneDelegate.swift */; };
 		8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B560259A0C0500463F50 /* HomeViewController.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8114304E259BA4B00066D161 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
+		81143056259BA5060066D161 /* MonthlyViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonthlyViewController+TableView.swift"; sourceTree = "<group>"; };
 		8124B559259A0C0500463F50 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8124B55C259A0C0500463F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8124B55E259A0C0500463F50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8114304D259BA4970066D161 /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				8114304E259BA4B00066D161 /* MonthlyViewController.swift */,
+				81143056259BA5060066D161 /* MonthlyViewController+TableView.swift */,
+			);
+			path = Monthly;
+			sourceTree = "<group>";
+		};
 		8124B550259A0C0500463F50 = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +245,7 @@
 		815A1A95259A10BB00B73B94 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8114304D259BA4970066D161 /* Monthly */,
 				8170EC3B259A5E3D00102BFF /* Details */,
 				8170EC3A259A5E3500102BFF /* Home */,
 			);
@@ -404,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8114304F259BA4B00066D161 /* MonthlyViewController.swift in Sources */,
 				815A8FC5259A546700C4D0A9 /* Months.swift in Sources */,
 				815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */,
 				8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */,
@@ -417,6 +432,7 @@
 				815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */,
 				81677DE2259B60DB00579693 /* Float+Reais.swift in Sources */,
 				8170EC3E259A5E5600102BFF /* DetailsViewController.swift in Sources */,
+				81143057259BA5060066D161 /* MonthlyViewController+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,7 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = viniciushiga.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -620,7 +636,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = viniciushiga.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

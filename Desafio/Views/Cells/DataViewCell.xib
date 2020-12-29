@@ -34,7 +34,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-ZJ-2qc" userLabel="Value Label">
-                    <rect key="frame" x="254" y="30" width="140" height="21"/>
+                    <rect key="frame" x="334.5" y="30" width="59.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -49,7 +49,6 @@
                 <constraint firstItem="PdS-ZJ-2qc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="eOU-sk-jbf"/>
                 <constraint firstItem="2aQ-0t-H2i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hm3-xQ-ynq"/>
                 <constraint firstItem="RW9-rG-b53" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="pMQ-IQ-As6"/>
-                <constraint firstItem="PdS-ZJ-2qc" firstAttribute="leading" secondItem="RW9-rG-b53" secondAttribute="trailing" constant="42" id="pul-Ng-fh0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PdS-ZJ-2qc" secondAttribute="bottom" constant="29" id="wgm-8l-n3U"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PdS-ZJ-2qc" secondAttribute="trailing" constant="20" id="xMw-Bi-uxb"/>
             </constraints>
