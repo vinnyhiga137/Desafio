@@ -18,7 +18,7 @@
 
 - Criar novas categorias [ ]
 - Alterar as categorias dos lançamentos [ ]
-- Poder Filtrar por Mês [ ]
+- Poder Filtrar por Mês [X]
 - Testes de UI [ ]
 - Utilizar Arquitetura MVVM [X]
 - Utilizar Coordinator [ ]
