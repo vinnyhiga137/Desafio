@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeViewModel: NSObject {
+class CreditLaunchesViewModel: NSObject {
     
     // Local internal attributes
     var updateTableViewData: (() -> ()) = {}

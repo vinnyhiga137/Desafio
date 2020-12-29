@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     // Local attributes
     let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
-    let homeViewModel = HomeViewModel()
+    let homeViewModel = CreditLaunchesViewModel()
     
     // Loading the views manually
     override func loadView() {

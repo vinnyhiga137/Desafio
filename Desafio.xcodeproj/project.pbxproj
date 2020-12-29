@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		8114304F259BA4B00066D161 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8114304E259BA4B00066D161 /* MonthlyViewController.swift */; };
 		81143057259BA5060066D161 /* MonthlyViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81143056259BA5060066D161 /* MonthlyViewController+TableView.swift */; };
+		8114305E259BA8920066D161 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8114305D259BA8920066D161 /* CalendarHeaderView.swift */; };
+		81143063259BA8AB0066D161 /* CalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81143062259BA8AB0066D161 /* CalendarHeaderView.xib */; };
 		8124B55D259A0C0500463F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B55C259A0C0500463F50 /* AppDelegate.swift */; };
 		8124B55F259A0C0500463F50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B55E259A0C0500463F50 /* SceneDelegate.swift */; };
 		8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B560259A0C0500463F50 /* HomeViewController.swift */; };
 		8124B566259A0C0600463F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8124B565259A0C0600463F50 /* Assets.xcassets */; };
 		8124B569259A0C0600463F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8124B567259A0C0600463F50 /* LaunchScreen.storyboard */; };
-		8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B5A5259A0D3800463F50 /* HomeViewModel.swift */; };
+		8124B5A6259A0D3800463F50 /* CreditLaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124B5A5259A0D3800463F50 /* CreditLaunchesViewModel.swift */; };
 		812DB76B259A654300C53E98 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB76A259A654300C53E98 /* CategoryType.swift */; };
 		812DB771259A6DD400C53E98 /* ReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DB770259A6DD400C53E98 /* ReceiptView.swift */; };
 		812DB779259A6E3200C53E98 /* ReceiptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812DB778259A6E3200C53E98 /* ReceiptView.xib */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		8114304E259BA4B00066D161 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
 		81143056259BA5060066D161 /* MonthlyViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonthlyViewController+TableView.swift"; sourceTree = "<group>"; };
+		8114305D259BA8920066D161 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		81143062259BA8AB0066D161 /* CalendarHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarHeaderView.xib; sourceTree = "<group>"; };
 		8124B559259A0C0500463F50 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8124B55C259A0C0500463F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8124B55E259A0C0500463F50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 		8124B575259A0C0700463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8124B57A259A0C0700463F50 /* DesafioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8124B580259A0C0700463F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8124B5A5259A0D3800463F50 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8124B5A5259A0D3800463F50 /* CreditLaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditLaunchesViewModel.swift; sourceTree = "<group>"; };
 		812DB76A259A654300C53E98 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		812DB770259A6DD400C53E98 /* ReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptView.swift; sourceTree = "<group>"; };
 		812DB778259A6E3200C53E98 /* ReceiptView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptView.xib; sourceTree = "<group>"; };
@@ -114,6 +118,24 @@
 				81143056259BA5060066D161 /* MonthlyViewController+TableView.swift */,
 			);
 			path = Monthly;
+			sourceTree = "<group>";
+		};
+		8114305B259BA8660066D161 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				812DB770259A6DD400C53E98 /* ReceiptView.swift */,
+				812DB778259A6E3200C53E98 /* ReceiptView.xib */,
+			);
+			path = Receipt;
+			sourceTree = "<group>";
+		};
+		8114305C259BA8750066D161 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8114305D259BA8920066D161 /* CalendarHeaderView.swift */,
+				81143062259BA8AB0066D161 /* CalendarHeaderView.xib */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		8124B550259A0C0500463F50 = {
@@ -185,7 +207,6 @@
 			children = (
 				812DB76F259A6DB800C53E98 /* CustomsViews */,
 				815A1A95259A10BB00B73B94 /* ViewControllers */,
-				815A1A94259A10B700B73B94 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,7 +223,7 @@
 		8124B59B259A0C9500463F50 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				8170EC3C259A5E4700102BFF /* Home */,
+				8124B5A5259A0D3800463F50 /* CreditLaunchesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,8 +248,9 @@
 		812DB76F259A6DB800C53E98 /* CustomsViews */ = {
 			isa = PBXGroup;
 			children = (
-				812DB770259A6DD400C53E98 /* ReceiptView.swift */,
-				812DB778259A6E3200C53E98 /* ReceiptView.xib */,
+				8114305C259BA8750066D161 /* Calendar */,
+				815A1A94259A10B700B73B94 /* Cells */,
+				8114305B259BA8660066D161 /* Receipt */,
 			);
 			path = CustomsViews;
 			sourceTree = "<group>";
@@ -276,14 +298,6 @@
 				8170EC3D259A5E5600102BFF /* DetailsViewController.swift */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		8170EC3C259A5E4700102BFF /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				8124B5A5259A0D3800463F50 /* HomeViewModel.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +408,7 @@
 				8124B566259A0C0600463F50 /* Assets.xcassets in Resources */,
 				815A1A9F259A117300B73B94 /* DataViewCell.xib in Resources */,
 				812DB779259A6E3200C53E98 /* ReceiptView.xib in Resources */,
+				81143063259BA8AB0066D161 /* CalendarHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8114304F259BA4B00066D161 /* MonthlyViewController.swift in Sources */,
+				8114305E259BA8920066D161 /* CalendarHeaderView.swift in Sources */,
 				815A8FC5259A546700C4D0A9 /* Months.swift in Sources */,
 				815A8FAB259A1BBC00C4D0A9 /* CreditLaunch.swift in Sources */,
 				8124B561259A0C0500463F50 /* HomeViewController.swift in Sources */,
@@ -428,7 +444,7 @@
 				8124B55F259A0C0500463F50 /* SceneDelegate.swift in Sources */,
 				815A1A90259A101800B73B94 /* HomeViewController+TableView.swift in Sources */,
 				812DB76B259A654300C53E98 /* CategoryType.swift in Sources */,
-				8124B5A6259A0D3800463F50 /* HomeViewModel.swift in Sources */,
+				8124B5A6259A0D3800463F50 /* CreditLaunchesViewModel.swift in Sources */,
 				815A8FB0259A1E5C00C4D0A9 /* NetworkHandler.swift in Sources */,
 				81677DE2259B60DB00579693 /* Float+Reais.swift in Sources */,
 				8170EC3E259A5E5600102BFF /* DetailsViewController.swift in Sources */,

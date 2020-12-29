@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         homeNavigation.viewControllers = [homeVC]
         monthlyNavigation.viewControllers = [monthlyVC]
         tab.viewControllers = [homeNavigation, monthlyNavigation]
-        
+
         homeNavigation.title = "Geral"
         monthlyNavigation.title = "Mensal"
         

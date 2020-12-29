@@ -10,11 +10,11 @@ import XCTest
 
 class HomeViewModelTests: XCTestCase {
 
-    private var homeViewModel: HomeViewModel?
+    private var homeViewModel: CreditLaunchesViewModel?
     
     override func setUp() {
         
-        self.homeViewModel = HomeViewModel()
+        self.homeViewModel = CreditLaunchesViewModel()
         
     }
 
